@@ -6,6 +6,8 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fontsource/habibi": "^4.5.2",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/core": "^5.0.0-alpha.54",
     "@mui/material": "^5.4.1",
     "@reduxjs/toolkit": "^1.7.2",
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,7 +18,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.1",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "5.0.0"
   },
   "scripts": {

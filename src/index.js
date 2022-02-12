@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 // import { Provider } from 'react-redux';
-import '@fontsource/habibi';
 import App from './App';
 // import { store } from './app/store';
 import * as serviceWorker from './serviceWorker';
