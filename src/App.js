@@ -1,6 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Switch, Route,
+} from 'react-router-dom';
 import './App.scss';
-import Header from './components/header/header';
+import NavBar from './components/navBar/navBar';
 import Footer from './components/footer/footer';
 import Currencies from './components/currencies/currencies';
 import Converter from './components/converter/converter';
@@ -9,18 +11,18 @@ import PageNotFound from './components/pageNotFound/pageNotFound';
 
 function App() {
   return (
-    <>
-      <Header />
+    <div className="app">
       <Router>
-        <Routes>
-          <Route path="/" element={<Currencies />} />
-          <Route path="currency/:details" element={<Details />} />
-          <Route path="converter" element={<Converter />} />
-          <Route path="page-not-found" element={<PageNotFound />} />
-        </Routes>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Currencies} />
+          <Route path="/:details" component={Details} />
+          <Route path="/converter" component={Converter} />
+          <Route path="/page-not-found" component={PageNotFound} />
+        </Switch>
+        <Footer />
       </Router>
-      <Footer />
-    </>
+    </div>
   );
 }
 
