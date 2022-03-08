@@ -1,14 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
-import historyReducer from './currencies/currencies';
+import currencyReducer from './currencies/currencies';
 import countryReducer from './countries/countries';
 
 const reducer = {
-  history: historyReducer,
+  currency: currencyReducer,
   country: countryReducer,
 };
 
 const store = configureStore({
   reducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false,
+  }, ['redux-immutable-state-invariant']),
+  preloadedState: undefined,
+  devTools: true,
 });
 
 export default store;

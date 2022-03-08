@@ -5,13 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export default function ActionAreaCard(props) {
-  const {
-    data: {
-      coat, currencyCode, currentRate, currencyName,
-    },
-  } = props;
-
+export default function ActionAreaCard({ code, coat, rate }) {
   const styles = {
     card: {
       background: `linear-gradient(
@@ -45,16 +39,13 @@ export default function ActionAreaCard(props) {
         /> */}
         <img style={styles.img} src={coat} alt="Coat of arms" />
         <CardContent>
-          <Typography gutterBottom style={styles.secondary} variant="p" component="div" color="text.secondary">
-            {currencyName}
-          </Typography>
           <Typography gutterBottom style={styles.primary} variant="p" component="div" color="text.secondary">
             (
-            {currencyCode}
+            {code}
             )
           </Typography>
           <Typography style={styles.secondary} variant="p" color="text.secondary">
-            {currentRate}
+            {rate}
           </Typography>
         </CardContent>
       </CardActionArea>
