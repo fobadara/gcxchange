@@ -46,8 +46,17 @@ const getRestructuredObject = async () => {
       renderObject = object;
     }
   }
-  console.log(renderObject)
-  return renderObject;
+  // Sort object
+  const sortedRates = renderObject.sort((a, b) => {
+    if (a.currencyCode < b.currencyCode) {
+      return -1;
+    } if (a.currencyCode > b.currencyCode) {
+      return 1;
+    }
+    return 0;
+  });
+  console.log(sortedRates)
+  return sortedRates;
 };
 
 export default getRestructuredObject;
