@@ -33,6 +33,7 @@ const Details = () => {
         list.languages = renderObjects[i].languages;
         list.timeZones = renderObjects[i].timezones;
         list.region = renderObjects[i].region;
+        list.lastUpdated = renderObjects[i].lastUpdated;
         data.push(list);
       }
 

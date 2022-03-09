@@ -23,6 +23,10 @@ const DetailsList = (props) => {
         <div>{data.currentRate}</div>
       </Grid>
       <Grid>
+        <div>Last Updated</div>
+        <div>{data.lastUpdated}</div>
+      </Grid>
+      <Grid>
         <div>Country</div>
         <div>{data.country}</div>
       </Grid>
