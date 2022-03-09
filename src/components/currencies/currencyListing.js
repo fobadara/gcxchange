@@ -11,10 +11,7 @@ import ActionAreaCard from '../currenciesCard/currenciesCard';
 import Paginate from '../paginate/paginate';
 
 const CurrencyListing = () => {
-  let renderObjects;
-  useEffect(() => {
-    renderObjects = getRestructuredObject();
-  }, []);
+  const renderObjects = getRestructuredObject();
 
   // Display pages based on paginate
   const [currentPage, setCurrentPage] = useState(1);

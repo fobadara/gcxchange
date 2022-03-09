@@ -1,8 +1,8 @@
 import store from '../redux/configureStore';
 
 // Get  and restructure items to render from data
-const getRestructuredObject = async () => {
-  const data = await store.getState();
+const getRestructuredObject = () => {
+  const data = store.getState();
   console.log(data)
   let renderObject;
   const object = [];
@@ -34,7 +34,8 @@ const getRestructuredObject = async () => {
               cardObject.currencyName = country[k].currencies[currencyCode].name;
               cardObject.coat = country[k].coatOfArms.png;
               cardObject.languages = country[k].languages;
-              cardObject.timeZones = country[k].timeZones;
+              cardObject.timeZones = country[k].timezones;
+              cardObject.country = country[k].name.common;
               cardObject.region = country[k].region;
               object.push(cardObject);
               // console.log(object)
@@ -46,15 +47,35 @@ const getRestructuredObject = async () => {
       renderObject = object;
     }
   }
-  // Sort object
-  const sortedRates = renderObject.sort((a, b) => {
-    if (a.currencyCode < b.currencyCode) {
-      return -1;
-    } if (a.currencyCode > b.currencyCode) {
-      return 1;
+
+  const RemoveDuplicates = (params) => {
+    const unique = new Set();
+    if (renderObject) {
+      const filtered = renderObject.filter((obj) => {
+        const isPresentInSet = unique.has(obj.currencyCode);
+
+        unique.add(obj.currencyCode);
+
+        return !isPresentInSet;
+      });
+      return filtered;
     }
-    return 0;
-  });
+  };
+
+  const uniqueRates = RemoveDuplicates();
+
+  // Sort object
+  let sortedRates;
+  if (uniqueRates) {
+    sortedRates = uniqueRates.sort((a, b) => {
+      if (a.currencyCode < b.currencyCode) {
+        return -1;
+      } if (a.currencyCode > b.currencyCode) {
+        return 1;
+      }
+      return 0;
+    });
+  }
   console.log(sortedRates)
   return sortedRates;
 };
