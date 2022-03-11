@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
 
 import { getCountry } from '../../redux/countries/countries';
 import getRestructuredObject from '../../common/dataLogic';
@@ -15,13 +18,13 @@ const CurrencyListing = () => {
 
   // Display pages based on paginate
   const [currentPage, setCurrentPage] = useState(1);
-  const [currenciesPerPage, setCurrenciesPerPage] = useState(10);
+  const [currenciesPerPage, setCurrenciesPerPage] = useState(12);
 
   // Get current currencies on present page
   let handleChange;
   let currentCurrencies;
   let totalPageNumber;
-  console.log(renderObjects)
+  // console.log(renderObjects)
   if (renderObjects) {
     const indexOfLastCurrency = currentPage * currenciesPerPage;
     const indexOfFirstCurrency = indexOfLastCurrency - currenciesPerPage;
@@ -41,13 +44,15 @@ const CurrencyListing = () => {
       let cards;
       if (current.currentRate !== 1) {
         cards = (
-          <Link to={`/${current.currencyCode}`} key={index}>
-            <ActionAreaCard
-              code={current.currencyCode}
-              coat={current.coat}
-              rate={current.currentRate}
-            />
-          </Link>
+          <Grid xs={6} sm={4} md={3}>
+            <Link to={`/details/${current.currencyCode}`} key={index}>
+              <ActionAreaCard
+                code={current.currencyCode}
+                coat={current.coat}
+                rate={current.currentRate}
+              />
+            </Link>
+          </Grid>
         );
       }
       return cards;
@@ -62,10 +67,14 @@ const CurrencyListing = () => {
   }
 
   return (
-    <>
-      <div>{renderCards}</div>
+    <div>
+      <div>
+        <Grid container spacing={0}>
+          {renderCards}
+        </Grid>
+      </div>
       <Paginate page={currentPage} onChange={handleChange} pageTotal={totalPageNumber} />
-    </>
+    </div>
   );
 };
 

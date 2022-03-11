@@ -1,0 +1,12 @@
+@import "../../common/colors.scss";
+#top {
+  background-color: $secondary-color;
+}
+
+#top-left {
+  width: 100px;
+  height: 86px;
+  margin-bottom: 1em;
+  background: url("../../images/stocks.svg") no-repeat,
+  // linear-gradient($secondary-color);
+}

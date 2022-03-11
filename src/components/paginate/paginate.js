@@ -1,10 +1,19 @@
 import Pagination from '@mui/material/Pagination';
 
-const Paginate = ({ page, onChange, pageTotal }) => {
+const Paginate = ({ page, onChange, pageTotal }) =>
+// const totalPageNumber = Math.ceil(totalCurrencies.length / currenciesPerPage);
+// console.log('total:', totalCurrencies.length)
+{
+  /* const totalPageNumber = Math.ceil(totalCurrencies.length / currenciesPerPage);*/
+  /* console.log('total:', totalCurrencies.length)*/
+  return (
   // const totalPageNumber = Math.ceil(totalCurrencies.length / currenciesPerPage);
   // console.log('total:', totalCurrencies.length)
-  return (
-    <Pagination count={pageTotal} page={page} onChange={onChange} color="secondary" />
+    <>
+      {pageTotal && (
+        <Pagination count={pageTotal} page={page} onChange={onChange} color="secondary" />
+      )}
+    </>
   );
 };
 

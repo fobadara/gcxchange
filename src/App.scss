@@ -6,14 +6,8 @@
   box-sizing: border-box;
   color: #fff;
 }
-
 body {
-  background:
-    linear-gradient(
-      rgba(9, 219, 37, 0.1),
-      rgba(6, 230, 73, 0.2)
-    ),
-    url("./images/bg.jpg");
+  background: $primary-color;
   background-size: cover;
   background-position: center;
   height: 100vh;

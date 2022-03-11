@@ -15,7 +15,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Currencies} />
-          <Route path="/:details" component={Details} />
+          <Route path="/details/:details" component={Details} />
           <Route path="/converter" component={Converter} />
           <Route path="/page-not-found" component={PageNotFound} />
         </Switch>

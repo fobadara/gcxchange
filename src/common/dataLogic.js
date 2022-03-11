@@ -37,6 +37,7 @@ const getRestructuredObject = () => {
               cardObject.timeZones = country[k].timezones;
               cardObject.country = country[k].name.common;
               cardObject.region = country[k].region;
+              cardObject.flag = country[k].flags.svg;
               object.push(cardObject);
               // console.log(object)
             }
