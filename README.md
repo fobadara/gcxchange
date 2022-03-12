@@ -4,9 +4,13 @@
 
 This is a website that displays exchange rates from United State Dollars to other currencies.
 
-||             Gcexchange ||
+||             Gcxchange ||
 |-|-----------------------------------|-|
-||![screenshot](./src/img/screen.gif)||
+||![screenshot](./src/img/../images/gcexchange.gif)||
+
+>Live Demo:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2cb2eecf-7202-4f70-959f-ce20250d3d81/deploy-status)](https://[app.netlify.com/sites/gcxchange/deploys](https://gcxchange.netlify.app/))
 
 ||Built With 🔨 ||
 |-|-------------|-|
@@ -24,7 +28,7 @@ To get a local copy up and running follow these simple example steps.
 > Clone the app by running this command
 
 ```bash 
-git clone https://github.com/fobadara/gcexchange.git
+git clone https://github.com/fobadara/gcxchange.git
 ```
 > Make sure you install the dependencies by runing this command
 
@@ -57,7 +61,7 @@ You can run tests by following these steps:
 
 • navigate to pull request
 
-• We have created a pull request which runs linters or you could simply create a pull request of your own
+• I have created a pull request which runs linters or you could simply create a pull request of your own
 
 | Author ✍️ |
 |---|

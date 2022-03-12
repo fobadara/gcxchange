@@ -8,6 +8,16 @@ exports[`App component Snapshot test 1`] = `
     <div
       className="logo-container"
     >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="back-icon"
+          height="50"
+          src="less-than.png"
+        />
+      </a>
       <div
         className="logo"
       >
