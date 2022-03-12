@@ -2,11 +2,13 @@
 
 nav {
   background: $primary-color;
-  padding: 20px;
+  padding: 10px;
+  padding-bottom: 5px;
   display: flex;
   justify-content: space-between;
   position: relative;
   z-index: 99;
+  height: 1em;
 }
 
 .fas {

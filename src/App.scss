@@ -7,16 +7,10 @@
   color: #fff;
 }
 
-.app {
-  background:
-    linear-gradient(
-      rgba(9, 219, 37, 0.1),
-      rgba(6, 230, 73, 0.2)
-    ),
-    url("./images/bg.jpg");
+body {
+  background: $primary-color;
   background-size: cover;
   background-position: center;
   height: 100vh;
   position: relative;
-  // overflow: hidden;
 }

@@ -1,12 +1,19 @@
-// import { configureStore } from '@reduxjs/toolkit';
-// import usersReducer from './usersReducer';
-// import postsReducer from './postsReducer';
+import { configureStore } from '@reduxjs/toolkit';
+import currencyReducer from './currencies/currencies';
+import countryReducer from './countries/countries';
 
-// const store = configureStore({
-//   reducer: {
-//     users: usersReducer,
-//     posts: postsReducer,
-//   },
-// });
+const reducer = {
+  currency: currencyReducer,
+  country: countryReducer,
+};
 
-// export default store;
+const store = configureStore({
+  reducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false,
+  }, ['redux-immutable-state-invariant']),
+  preloadedState: undefined,
+  devTools: true,
+});
+
+export default store;

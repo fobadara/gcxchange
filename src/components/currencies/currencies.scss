@@ -1,1 +1,10 @@
-@import './common/colors.scss';
+@import '../../common/colors.scss';
+
+#currencies {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+#base {
+  padding-bottom: 0.2em;
+}
