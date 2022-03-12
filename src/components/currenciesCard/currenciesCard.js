@@ -1,31 +1,24 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+import right from '../../images/right.svg';
 
 export default function ActionAreaCard({ code, coat, rate }) {
   const styles = {
     card: {
-      background: `linear-gradient(
-        rgba(9, 219, 37, 0.5),
-        rgba(6, 230, 73, 0.5)
-      )`,
-      // backgroundRepeat: 'no-repeat',
-      // backgroundPosition: 'center',
-      // backgroundSize: '50px 50px',
+      background: `url(${coat})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '10% 5%',
+      backgroundSize: '5em',
+      opacity: 1,
+    },
+    text: {
+      paddingTop: '180px',
+      paddingLeft: '57%',
+      fontFamily: 'Lato, sans-serif',
     },
     primary: {
       color: 'rgb(214, 41, 11)',
@@ -33,35 +26,32 @@ export default function ActionAreaCard({ code, coat, rate }) {
     secondary: {
       color: '#fff',
     },
-
     img: {
-      width: '4em',
+      color: '#fff',
+      float: 'right',
+      margin: '0.5em',
+      fontWeight: '500',
     },
   };
   return (
-    // <Grid xs={12}>
-      <Card style={styles.card} sx={{ minWidth: '100%', height: 300, borderRadius: 0 }}>
-        <CardActionArea>
-          {/* <CardMedia
-          component="img"
-          height="50"
-          width="50"
-          image={coat}
-          alt="Coat of arms"
-        /> */}
-          <img style={styles.img} src={coat} alt="Coat of arms" />
-          <CardContent>
-            <Typography gutterBottom style={styles.primary} variant="p" component="div" color="text.secondary">
-              (
-              {code}
-              )
-            </Typography>
-            <Typography style={styles.secondary} variant="p" color="text.secondary">
-              {rate}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    // </Grid>
+    <Card style={styles.card} id="container" sx={{ minWidth: '100%', height: 250, borderRadius: 0 }}>
+      <CardActionArea>
+        <img src={right} width="20" style={styles.img} alt="" />
+        <CardContent style={styles.text}>
+          <Typography gutterBottom style={styles.secondary} variant="p" component="div" color="text.secondary">
+            {code}
+          </Typography>
+          <Typography style={styles.secondary} variant="p" color="text.secondary">
+            {rate}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
+
+ActionAreaCard.propTypes = {
+  code: PropTypes.string.isRequired,
+  coat: PropTypes.string.isRequired,
+  rate: PropTypes.number.isRequired,
+};

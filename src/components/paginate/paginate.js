@@ -1,14 +1,9 @@
+import PropTypes from 'prop-types';
 import Pagination from '@mui/material/Pagination';
 
-const Paginate = ({ page, onChange, pageTotal }) =>
-// const totalPageNumber = Math.ceil(totalCurrencies.length / currenciesPerPage);
-// console.log('total:', totalCurrencies.length)
-{
-  /* const totalPageNumber = Math.ceil(totalCurrencies.length / currenciesPerPage);*/
-  /* console.log('total:', totalCurrencies.length)*/
+const Paginate = (props) => {
+  const { page, onChange, pageTotal } = props;
   return (
-  // const totalPageNumber = Math.ceil(totalCurrencies.length / currenciesPerPage);
-  // console.log('total:', totalCurrencies.length)
     <>
       {pageTotal && (
         <Pagination count={pageTotal} page={page} onChange={onChange} color="secondary" />
@@ -17,8 +12,10 @@ const Paginate = ({ page, onChange, pageTotal }) =>
   );
 };
 
-// const propTypes.Pagination = {
-//   currenciesPer
-// };
+Paginate.propTypes = {
+  page: PropTypes.number.isRequired,
+  pageTotal: PropTypes.number.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default Paginate;

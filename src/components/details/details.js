@@ -1,33 +1,20 @@
-import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import DetailsListing from './detailsListing';
+import Grid from '@mui/material/Grid';
 
-import { getCountry } from '../../redux/countries/countries';
-import { getCurrency, getSortedData } from '../../redux/currencies/currencies';
+import DetailsListing from './detailsListing';
 import getRestructuredObject from '../../common/dataLogic';
 
 const Details = () => {
   const currencyCode = useParams();
-  console.log(currencyCode)
   const renderObjects = getRestructuredObject();
   const { details } = currencyCode;
-  const [data, setData] = useState('');
-  // let img;
-
-
+  const [data, setData] = useState({});
   useEffect(() => {
-    console.log(renderObjects);
     if (renderObjects) {
       for (let i = 0; i < renderObjects.length; i += 1) {
-        if (i === 1) {
-          console.log(renderObjects[i].currencyCode)
-        }
         if (renderObjects[i].currencyCode === details) {
-          console.log(renderObjects[i].currencyCode)
-          console.log('zzzz')
           const list = {};
-          console.log(renderObjects[i], details);
           list.currencyCode = renderObjects[i].currencyCode;
           list.coat = renderObjects[i].coat;
           list.currentRate = renderObjects[i].currentRate;
@@ -38,28 +25,30 @@ const Details = () => {
           list.timeZones = renderObjects[i].timezones;
           list.region = renderObjects[i].region;
           list.lastUpdated = renderObjects[i].lastUpdated;
-          // useEffect(() => {
-          // handler = (list) => {
           setData(list);
-          // };
-          // }, []);
-          console.log(data)
-          // return;
         }
       }
     }
   }, []);
 
   const top = (
-    <div>
-      <img src={data.coat} alt="Coat of arms" width="50" />
-      <div>{data.currencyCode}</div>
-    </div>
+    <Grid
+      container
+      className="top"
+      justifyContent="space-between"
+      alignItems="center"
+      sx={{
+        mx: 'auto', mt: '1.6em', px: '0.8em', py: '2em',
+      }}
+    >
+      <Grid sx={{ pr: 10 }} item xs={6}>
+        <img src={data.coat} alt="Coat of arms" width="80" />
+      </Grid>
+      <Grid sx={{ pl: 12 }} item xs={6}>
+        <h1 style={{ fontSize: 'medium' }}>{data.currencyCode}</h1>
+      </Grid>
+    </Grid>
   );
-  // }
-  // });
-
-  // console.log(sortedData);
   return (
     <div>
       {top}

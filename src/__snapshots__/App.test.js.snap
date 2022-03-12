@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Snapshot test 1`] = `
+<div
+  className="app"
+>
+  <nav>
+    <div
+      className="logo-container"
+    >
+      <div
+        className="logo"
+      >
+        GC
+      </div>
+      <div
+        id="font"
+      >
+        xchange
+      </div>
+    </div>
+  </nav>
+  <section
+    id="currencies"
+  >
+    <article
+      className="top"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-container css-4cptzq-MuiGrid-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-9yvld-MuiGrid-root"
+          id="container"
+        >
+          <div
+            id="top-left"
+          />
+        </div>
+        <div
+          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-yg9lyp-MuiGrid-root"
+        >
+          <h3
+            style={Object {}}
+          >
+            Today is:
+          </h3>
+          <div
+            style={Object {}}
+          >
+            Saturday 12/03/2022
+          </div>
+        </div>
+      </div>
+    </article>
+    <div
+      id="base"
+    >
+      Base currency: USD
+    </div>
+    <div>
+      <div>
+        <div
+          className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+        />
+      </div>
+      0
+    </div>
+  </section>
+</div>
+`;

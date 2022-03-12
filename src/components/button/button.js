@@ -2,15 +2,15 @@
 
 // const SuccessButton = (props) => {
 //   const {type} = props;
-  
+
 //   const handleClick = () => {
 //     if(type === 'search') {
-      
+
 //     };
 //   };
-//   return ( 
+//   return (
 //     <Button color="success" variant="outlined" size="small" onClick={handleClick}> Go</Button>
 //    );
 // }
- 
+
 // export default SuccessButton;

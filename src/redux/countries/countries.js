@@ -2,8 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchAsyncCountry = createAsyncThunk('gcxchange/currencies/getAsyncCountry', async () => {
-  const response = await axios.get(`https://restcountries.com/v3.1/all`);
-  // console.log(response.data);
+  const response = await axios.get('https://restcountries.com/v3.1/all');
   return response.data;
 });
 
@@ -14,18 +13,9 @@ const countrySlice = createSlice({
     // standard reducer logic, with auto-generated action types per reducer
   },
   extraReducers: {
-    [fetchAsyncCountry.pending]: (state) => {
-      console.log('pending');
-      return { ...state, loading: 'true' };
-    },
-    [fetchAsyncCountry.fulfilled]: (state, { payload }) => {
-      console.log('fulfilled');
-      return { ...state, country: payload, loading: 'successful' };
-    },
-    [fetchAsyncCountry.rejected]: (state) => {
-      console.log('rejected');
-      return { ...state, loading: 'rejected' };
-    },
+    [fetchAsyncCountry.pending]: (state) => ({ ...state, loading: 'true' }),
+    [fetchAsyncCountry.fulfilled]: (state, { payload }) => ({ ...state, country: payload, loading: 'successful' }),
+    [fetchAsyncCountry.rejected]: (state) => ({ ...state, loading: 'rejected' }),
   },
 });
 

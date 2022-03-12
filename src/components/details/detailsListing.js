@@ -1,101 +1,66 @@
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import './detailsListing.scss';
 
 const DetailsList = (props) => {
-  // const {currencyCode, currentRate, baseCode,
-  //   currencyName, coat, languages, timeZones, region
-  // } =
-  console.log('asscbgggg')
-  // const data = dataArray;
-  // const data = useEffect(() => {
-  const { dataArray } = props;
-  // return dataArray;
-  // }, [props]);
-
-  // let list;
-  // if (dataArray) {
-  // console.log(data)
-  // list = (
-  // <>
-  {/* <Grid>
-          <div>Currency</div>
-          <div>{data.currencyName}</div>
-        </Grid>
-        <Grid key="base">
-          <div>Base Code</div>
-          <div>{data.baseCode}</div>
-        </Grid>
-        <Grid>
-          <div>Rate</div>
-          <div>{data.currentRate}</div>
-        </Grid>
-        <Grid>
-          <div>Last Updated</div>
-          <div>{data.lastUpdated}</div>
-        </Grid>
-        <Grid>
-          <div>Country</div>
-          <div>{data.country}</div>
-        </Grid>
-        <Grid>
-          <div>Continent</div>
-          <div>{data.region}</div>
-        </Grid>
-        {/* <Grid>
-          <div>Languages</div>
-          <div>
-            {data.languages.map((language) => (
-              <span key={language}>
-                data.languages[language]
-                {' '}
-              </span>
-            ))}
-          </div>
-        </Grid> */}
-  {/* <Grid>
-          <div>Timezones</div>
-          <div>
-            {data.timZones.map((timeZone) => (
-              <span key={timeZone}>
-                {data.timeZones[timeZone]}
-                {' '}
-              </span>
-            ))}
-          </div>
-        </Grid> */}
-  // </> */}
-  // );
-  // }
+  const {
+    dataArray: {
+      currencyCode,
+      currencyName,
+      currentRate,
+      baseCode,
+      lastUpdated,
+      country,
+      region,
+    },
+  } = props;
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Grid>
-        <div>Currency</div>
-        <div>{dataArray.currencyName}</div>
+      <div id="about">
+        About
+        {' '}
+        {currencyCode}
+      </div>
+      <Grid container className="details" justifyContent="space-between">
+        <Grid item xs={6}>Currency</Grid>
+        <Grid item xs={6}>{currencyName}</Grid>
       </Grid>
-      <Grid key="base">
-        <div>Base Code</div>
-        <div>{dataArray.baseCode}</div>
+      <Grid container className="details" justifyContent="space-between" key="base">
+        <Grid item xs={6}>Base Code</Grid>
+        <Grid item xs={6}>{baseCode}</Grid>
       </Grid>
-      <Grid>
-        <div>Rate</div>
-        <div>{dataArray.currentRate}</div>
+      <Grid container className="details" justifyContent="space-between">
+        <Grid item xs={6}>Rate</Grid>
+        <Grid item xs={6}>{currentRate}</Grid>
       </Grid>
-      <Grid>
-        <div>Last Updated</div>
-        <div>{dataArray.lastUpdated}</div>
+      <Grid container className="details" justifyContent="space-between">
+        <Grid item xs={6}>Last Updated</Grid>
+        <Grid item xs={6}>{lastUpdated}</Grid>
       </Grid>
-      <Grid>
-        <div>Country</div>
-        <div>{dataArray.country}</div>
+      <Grid container className="details" justifyContent="space-between">
+        <Grid item xs={6}>Country</Grid>
+        <Grid item xs={6}>{country}</Grid>
       </Grid>
-      <Grid>
-        <div>Continent</div>
-        <div>{dataArray.region}</div>
+      <Grid container className="details" justifyContent="space-between">
+        <Grid item xs={6}>Continent</Grid>
+        <Grid item xs={6}>{region}</Grid>
       </Grid>
     </Box>
   );
+};
+
+DetailsList.propTypes = {
+  dataArray: PropTypes.shape({
+    currencyCode: PropTypes.string,
+    currencyName: PropTypes.string,
+    currentRate: PropTypes.number,
+    baseCode: PropTypes.string,
+    lastUpdated: PropTypes.string,
+    country: PropTypes.string,
+    region: PropTypes.string,
+  }).isRequired,
 };
 
 export default DetailsList;
