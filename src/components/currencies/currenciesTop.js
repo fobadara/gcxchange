@@ -1,7 +1,6 @@
 import Grid from '@mui/material/Grid';
 
 import getCurrenDateTime from '../../common/currentDateTime';
-// import stock from '../../images/stocks.svg';
 import './currenciesTop.scss';
 
 const Top = () => {

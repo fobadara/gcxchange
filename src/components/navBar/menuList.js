@@ -9,11 +9,6 @@ const menuList = [
     url: '/converter',
     id: 1,
   },
-  // {
-  //   title: 'Details',
-  //   url: '/currencies/:details',
-  //   id: 3,
-  // },
 ];
 
 export default menuList;

@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid';
 import getRestructuredObject from '../../common/dataLogic';
 import ActionAreaCard from '../currenciesCard/currenciesCard';
 import Paginate from '../paginate/paginate';
-import './currencyListing.scss';
 
 const CurrencyListing = () => {
   const renderObjects = getRestructuredObject();
