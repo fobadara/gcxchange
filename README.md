@@ -8,9 +8,7 @@ This is a website that displays exchange rates from United State Dollars to othe
 |-|-----------------------------------|-|
 ||![screenshot](./src/img/../images/gcexchange.gif)||
 
->Live Demo:
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2cb2eecf-7202-4f70-959f-ce20250d3d81/deploy-status)](https://[app.netlify.com/sites/gcxchange/deploys](https://gcxchange.netlify.app/))
+> [Live Demo](https://gcxchange.netlify.app/)
 
 ||Built With 🔨 ||
 |-|-------------|-|
