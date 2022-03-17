@@ -1,7 +1,7 @@
 import store from '../redux/configureStore';
 
 // Get  and restructure items to render from data
-const getRestructuredObject = () => {
+function getRestructuredObject() {
   const data = store.getState();
   let renderObject;
   const object = [];
@@ -40,7 +40,7 @@ const getRestructuredObject = () => {
     }
   }
 
-  const RemoveDuplicates = () => {
+  function RemoveDuplicates() {
     const unique = new Set();
     let filtered;
     if (renderObject) {
@@ -53,7 +53,7 @@ const getRestructuredObject = () => {
       });
     }
     return filtered;
-  };
+  }
 
   const uniqueRates = RemoveDuplicates();
 
@@ -70,6 +70,6 @@ const getRestructuredObject = () => {
     });
   }
   return sortedRates;
-};
+}
 
 export default getRestructuredObject;
