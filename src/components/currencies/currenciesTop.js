@@ -7,6 +7,7 @@ const Top = () => {
   const {
     day, numDay, month, year,
   } = getCurrenDateTime();
+
   return (
     <article className="top">
       <Grid container justifyContent="center" alignItems="center" sx={{ mx: 'auto', py: '2em', width: '80%' }}>

@@ -6,8 +6,13 @@ import DetailsListing from './detailsListing';
 import getRestructuredObject from '../../common/dataLogic';
 
 const Details = () => {
-  const currencyCode = useParams();
+  const code = useParams();
+  const [currencyCode, setCurrencyCode] = useState(code);
+  useEffect(() => {
+    setCurrencyCode(code);
+  }, [code]);
   const renderObjects = getRestructuredObject();
+  // console.log(getRestructuredObject);
   const { details } = currencyCode;
   const [data, setData] = useState({});
   useEffect(() => {
@@ -29,7 +34,7 @@ const Details = () => {
         }
       }
     }
-  }, []);
+  }, [currencyCode]);
 
   const top = (
     <Grid
