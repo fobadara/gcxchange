@@ -53,10 +53,6 @@ const CurrencyListing = () => {
   return (
     <div>
       <div>
-        <Link to="/details/AMD">
-          ALL
-        </Link>
-        {/* <a href={`details/ALL`}>Test</a> */}
         <Grid container spacing={0}>
           {renderCards && renderCards}
         </Grid>
