@@ -9,7 +9,6 @@ import Paginate from '../paginate/paginate';
 
 const CurrencyListing = () => {
   const renderObjects = getRestructuredObject();
-
   // Display pages based on paginate
   const [currentPage, setCurrentPage] = useState(1);
   const currenciesPerPage = 12;
