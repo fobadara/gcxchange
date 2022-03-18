@@ -80,7 +80,11 @@ Feel free to check the issues page.
 
 Give a ⭐️ if you like this project!
 
-Hat tip to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design idea.
+
+**Acknowledgements**
+
+[Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design idea.
+
 
 **📝 License**
 

@@ -4,6 +4,46 @@ exports[`App component Snapshot test 1`] = `
 <div
   className="app"
 >
+  <div
+    className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-1k7sk4d-MuiGrid-root"
+    >
+      <nav>
+        <div
+          className="logo-container"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            <img
+              alt="back-icon"
+              height="20"
+              src="less-than.png"
+              width="30"
+            />
+          </a>
+          <div
+            className="logo"
+          >
+            GC
+          </div>
+          <div
+            id="font"
+          >
+            xchange
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-1k7sk4d-MuiGrid-root"
+    >
+      
+    </div>
+  </div>
   <section
     id="currencies"
   >
@@ -32,7 +72,7 @@ exports[`App component Snapshot test 1`] = `
           <div
             style={Object {}}
           >
-            Thursday 17/03/2022
+            Friday 18/03/2022
           </div>
         </div>
       </div>
@@ -44,12 +84,6 @@ exports[`App component Snapshot test 1`] = `
     </div>
     <div>
       <div>
-        <a
-          href="/details/AMD"
-          onClick={[Function]}
-        >
-          ALL
-        </a>
         <div
           className="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
         />
