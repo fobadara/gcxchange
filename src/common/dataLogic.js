@@ -6,7 +6,7 @@ function getRestructuredObject() {
   let renderObject;
   const object = [];
 
-  if (data) {
+  if (data.currency && data.country) {
     const { currency } = data.currency;
 
     const rates = currency.conversion_rates;

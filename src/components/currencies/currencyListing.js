@@ -9,7 +9,6 @@ import Paginate from '../paginate/paginate';
 
 const CurrencyListing = () => {
   const renderObjects = getRestructuredObject();
-
   // Display pages based on paginate
   const [currentPage, setCurrentPage] = useState(1);
   const currenciesPerPage = 12;
@@ -56,7 +55,6 @@ const CurrencyListing = () => {
         <Link to="/details/AMD">
           ALL
         </Link>
-        {/* <a href={`details/ALL`}>Test</a> */}
         <Grid container spacing={0}>
           {renderCards && renderCards}
         </Grid>
