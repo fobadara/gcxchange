@@ -1,0 +1,110 @@
+@import "../../common/colors.scss";
+
+nav {
+  background: $primary-color;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 99;
+  height: 1em;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+}
+
+.hamburger .fa-times {
+  transform: rotate(360deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger .fa-bars {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.logo-container {
+  display: flex;
+  font-family: cursive;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 2em;
+  color: rgb(214, 41, 11);
+}
+
+#font {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 10px 2px 1px -7px;
+}
+
+.menu-list {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(85, 187, 17, 0.7);
+  right: 0;
+  top: 90px;
+  transition: all 0.5s ease-in-out;
+
+  li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  li a {
+    text-decoration: none;
+    font-weight: 300;
+    width: 100px;
+    display: block;
+    margin: auto;
+  }
+}
+
+.menu-list.close {
+  right: -100%;
+  transition: all 0.5s ease-in-out;
+  border-left: solid thick #fff;
+}
+
+.menu-list li a:hover,
+.menu-list li a:active {
+  background: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: $primary-color;
+  transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+    flex-direction: row;
+  }
+
+  .menu-list {
+    border: none;
+    justify-content: flex-end;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+  }
+
+  .menu-list.close {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    border-left: none;
+  }
+}
