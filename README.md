@@ -1,4 +1,14 @@
-### Gcxchange
+# Gcxchange
+- [Gcxchange](#gcxchange)
+  - [Description 🏗️](#description-️)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Run tests](#run-tests)
+  - [About Me](#about-me)
+  - [Contributing](#contributing)
+  - [Show your support](#show-your-support)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
 
 ## Description 🏗️
 
@@ -21,7 +31,9 @@ This is a website that displays exchange rates from United State Dollars to othe
 |-|-------------|-|
 ||![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)   ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![webpack](https://www.vectorlogo.zone/logos/js_webpack/js_webpack-ar21.svg)||
 
-## Getting Started 🏁
+## Getting Started 
+
+🏁
 
 To get a local copy up and running follow these simple example steps.
 
@@ -45,7 +57,8 @@ npm install
 It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000).
 
-**Prerequisites 📜**
+### Prerequisites 
+📜
 
 You will be needing:
 
@@ -53,9 +66,9 @@ You will be needing:
 
 • A text editor or terminal
 
-**Run tests**
+### Run tests
 
-You can run tests by following these steps:
+You can run linters tests by following these steps:
 
 • commit and push your changes
 
@@ -63,6 +76,7 @@ You can run tests by following these steps:
 
 • I have created a pull request which runs linters or you could simply create a pull request of your own
 
+## About Me
 | Author ✍️ |
 |---|
 |👤 Abdulfatai Badara
@@ -70,22 +84,27 @@ You can run tests by following these steps:
 <a target="_blank" href="mailto:fob90s@gmail.com"><img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=Gmail&logoColor=white" alt="Gmail account"></a> <a target="_blank" href="https://wa.me/+2349066478370"> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Whatsapp account"></a> (Click to reach me)|
 
 
-**🤝 Contributing**
+## Contributing
+
+🤝
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the issues page.
 
-**Show your support 💪**
+## Show your support 
+
+💪
 
 Give a ⭐️ if you like this project!
 
 
-**Acknowledgements**
+## Acknowledgements
 
 [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design idea.
 
+## License
 
-**📝 License**
+📝 
 
 This project is licensed by [MIT](LICENSE) -->
