@@ -1,0 +1,18 @@
+@import "../../common/colors.scss";
+
+.top {
+  background-color: $secondary-color;
+}
+
+#container {
+  opacity: 0.3;
+  left: 0;
+}
+
+#top-left {
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: url("../../images/stocks.svg") no-repeat;
+}

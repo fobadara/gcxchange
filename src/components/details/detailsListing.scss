@@ -1,0 +1,19 @@
+@import '../../common/colors.scss';
+
+#about {
+  padding-left: 2%;
+}
+
+.test {
+  margin-bottom: 0;
+}
+
+.details {
+  padding-left: 0.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.details:nth-child(even) {
+  background-color: $secondary-color;
+}
