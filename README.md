@@ -40,6 +40,10 @@ To get a local copy up and running follow these simple example steps.
 ```bash 
 git clone https://github.com/fobadara/gcxchange.git
 ```
+> Navigate into the folder by running this command
+```bash
+cd gcxchange
+```
 > Make sure you install the dependencies by runing this command
 
 ```bash
